@@ -1,0 +1,26 @@
+    1  history 
+    2  ls
+    3  history 
+    4  history > historic
+    5  ls
+    6  git status
+    7  cd git
+    8  mkdir git
+    9  cd git
+   10  git status
+   11  ls -l
+   12  ls -la
+   13  cd..
+   14  ls -la
+   15  git init
+   16  git config --global user.name "Moises"
+   17  git config --global user.email "47767573t@iespoblenou.org"
+   18  cd..
+   19  cd $HOME
+   20  ls -la
+   21  nano gitconfig
+   22  nano .gitconfig
+   23  cd git
+   24  git historic
+   25  ls -la
+   26  history > historic
