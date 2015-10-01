@@ -1,0 +1,13 @@
+package Practica2;
+
+public class Animal {
+
+	private String nom = "sense nom";
+	private String nombre = "descatal·logat";
+	private String[] codi = {"EX","EW","CR","EN","VU","NT","LC"};
+	
+	public Animal() {
+	
+	}
+
+}

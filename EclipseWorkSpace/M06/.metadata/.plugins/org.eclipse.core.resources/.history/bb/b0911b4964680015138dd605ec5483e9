@@ -1,0 +1,9 @@
+package Practica2;
+
+public class enjaular {
+
+	public enjaular() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

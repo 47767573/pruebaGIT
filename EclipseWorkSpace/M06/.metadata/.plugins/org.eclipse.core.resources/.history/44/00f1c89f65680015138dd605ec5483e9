@@ -1,0 +1,23 @@
+package Practica2;
+
+import java.io.File;
+
+public class Enjaular {
+	
+	public void guardar (Animal a, String path){	
+		
+	}
+	
+	public void guardar (Animal a, File fichero){	
+		
+	}
+	
+	public void soltar (String path){
+		
+	}
+	
+	public void soltar (File fichero){
+		
+	}
+
+}

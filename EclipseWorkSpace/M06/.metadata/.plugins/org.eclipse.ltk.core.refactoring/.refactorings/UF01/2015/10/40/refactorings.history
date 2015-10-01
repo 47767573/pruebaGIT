@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Practica2.enjaular&apos; to &apos;Enjaular&apos;&#x0A;- Original project: &apos;UF01&apos;&#x0A;- Original element: &apos;Practica2.enjaular&apos;&#x0A;- Renamed element: &apos;Practica2.Enjaular&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;enjaular&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Practica2{enjaular.java[enjaular" matchStrategy="1" name="Enjaular" qualified="false" references="true" similarDeclarations="false" stamp="1443721957304" textual="false" version="1.0"/>
+</session>

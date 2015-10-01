@@ -1,0 +1,62 @@
+package Practica2;
+
+import java.io.Serializable;
+import java.util.Scanner;
+
+
+
+public class Animal implements Serializable{
+
+	private String nombre = "sin nombre";
+	private String numero = "descatalogado";
+	private String codi = "";
+	
+	//{"EX","EW","CR","EN","VU","NT","LC"};
+	
+	public Animal() {	
+		Scanner sc = new Scanner (System.in);
+		
+		System.out.println("Nombre d'animal: ");
+		nombre = sc.next();
+		System.out.println("Numero d'animal: ");
+		numero = sc.next();
+		while (valCodiAnimal(codi)){
+			
+		}
+		
+		System.out.println("codi: ");
+		codi = sc.next();
+				
+		
+	}
+	
+	public boolean valCodiAnimal (String codigos){
+		String codigo = codigos.toLowerCase();
+		if (codigo.equals("ex")) return true;
+		else if (codigo.equals("ew")) return true;
+		else if (codigo.equals("cr")) return true;
+		else if (codigo.equals("en")) return true;
+		else if (codigo.equals("vu")) return true;
+		else if (codigo.equals("nt")) return true;
+		else if (codigo.equals("lc")) return true;
+		else return false;
+	}
+	
+	public void msgVal(boolean resultado){
+		if (resultado == false) System.out.println("incorrecto!"); 		
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+	
+	public String getNumero() {
+		return numero;
+	}
+
+	public String getCodi() {
+		return codi;
+	}
+	
+
+}
