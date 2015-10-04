@@ -2,6 +2,8 @@ package com.primapp.conversor;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText diferencial;
 
     //Definimos las variables de salida
-    private TextView mes;
-    private TextView total;
+    private TextView mes, total;
 
     //Definimos boton de inicio del calculo
     private Button Calc;
@@ -31,25 +32,67 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         preuInm = (EditText)findViewById(R.id.etPreuInm);
+        preuInm.addTextChangedListener(onWatch);
+
         estalvis = (EditText)findViewById(R.id.etEstalvis);
+        preuInm.addTextChangedListener(onWatch);
+
         plazo = (EditText)findViewById(R.id.etPlazo);
+        preuInm.addTextChangedListener(onWatch);
+
         euribor = (EditText)findViewById(R.id.etEuribor);
+        preuInm.addTextChangedListener(onWatch);
+
         diferencial = (EditText)findViewById(R.id.etDiferencial);
+        preuInm.addTextChangedListener(onWatch);
+
 
         mes = (TextView)findViewById(R.id.tvMes);
         total = (TextView)findViewById(R.id.tvTotal);
 
+        //ocultamos los resultados inicialmente ya que no hay valores que calcular
+        mes.setVisibility (View.GONE);
+        total.setVisibility(View.GONE);
+
+        //referenciamos el botón
         Calc = (Button)findViewById(R.id.btnCal);
 
         //ajustamos los valores a 0 al crearse
         setValues ("0","0");
     }
 
-    public void initilize(){
+    /*public void initilize(){
+        estalvis, plazo, euribor, diferencial;
 
-    }
+        preuInm = 0;
+        estalvis = 0;
 
+    }*/
+
+    public final TextWatcher onWatch = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {    }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            total.setVisibility(View.VISIBLE);
+            mes.setVisibility(View.VISIBLE);
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            if (s.length() == 0){
+                total.setVisibility(View.GONE);
+                mes.setVisibility(View.GONE);
+            }else{
+                //onCalcular();
+            }
+
+
+        }
+    };
 
 
     @Override
