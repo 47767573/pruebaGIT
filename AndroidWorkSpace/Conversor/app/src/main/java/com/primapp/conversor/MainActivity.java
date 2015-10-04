@@ -42,12 +42,14 @@ public class MainActivity extends AppCompatActivity {
 
         Calc = (Button)findViewById(R.id.btnCal);
 
-        setValues ("100","100");
+        //ajustamos los valores a 0 al crearse
+        setValues ("0","0");
     }
 
     public void initilize(){
 
     }
+
 
 
     @Override
@@ -76,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void calcHipoteca (){
 
-        //Pasamos a double
+        //Parseamos a double
         double preuInmDb = Double.valueOf(preuInm.getText().toString());
         double estalvisDb = Double.valueOf(estalvis.getText().toString());
         double plazoDb = Double.valueOf(plazo.getText().toString());
@@ -102,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setValues (String mesCal, String totalCal) {
-
         mes.setText("Mes: "+mesCal);
         total.setText("Total: "+totalCal);
     }

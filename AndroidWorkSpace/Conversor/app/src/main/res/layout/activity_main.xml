@@ -7,28 +7,38 @@
         android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
         android:id="@+id/conversor">
 
+
+        EDITABLES      ##########################################################
         <EditText
+            android:hint="0"
+            android:textColorHint="B4B4B4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:ems="10"
+            android:ems="0"
             android:id="@+id/etPreuInm"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="33dp" />
+            android:layout_marginTop="33dp"
+            android:textIsSelectable="true"
+            android:focusableInTouchMode="false" />
 
         <EditText
+            android:hint="0"
+            android:textColorHint="B4B4B4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:ems="10"
+            android:ems="0"
             android:id="@+id/etEstalvis"
             android:layout_below="@+id/etPreuInm"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
         <EditText
+            android:hint="0"
+            android:textColorHint="B4B4B4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -39,6 +49,8 @@
             android:layout_alignParentEnd="true" />
 
         <EditText
+            android:hint="0"
+            android:textColorHint="B4B4B4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
@@ -49,6 +61,8 @@
             android:layout_alignParentEnd="true" />
 
         <EditText
+            android:hint="0"
+            android:textColorHint="B4B4B4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
@@ -58,6 +72,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
+        BOTONES      ##########################################################
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
@@ -69,6 +84,9 @@
             android:layout_marginTop="57dp"
             android:onClick="onCalcular" />
 
+
+
+        TEXTVIEW      ##########################################################
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
