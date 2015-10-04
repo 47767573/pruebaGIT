@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import java.math.*;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mes;
     private TextView total;
 
-    //Definimos boton de inicio del evento
+    //Definimos boton de inicio del calculo
     private Button Calc;
 
     @Override
@@ -43,20 +42,21 @@ public class MainActivity extends AppCompatActivity {
 
         Calc = (Button)findViewById(R.id.btnCal);
 
+        setValues ("100","100");
+    }
 
-
-
-
-
-
+    public void initilize(){
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+
+
     }
 
     @Override
