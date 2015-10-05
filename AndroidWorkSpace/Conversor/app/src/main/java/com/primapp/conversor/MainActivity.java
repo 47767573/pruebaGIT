@@ -87,10 +87,8 @@ public class MainActivity extends AppCompatActivity {
                 total.setVisibility(View.GONE);
                 mes.setVisibility(View.GONE);
             }else{
-                //onCalcular();
+                calcHipoteca();
             }
-
-
         }
     };
 
@@ -119,6 +117,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void onCalcular(View view) {
+        calcHipoteca();
+    }
+
     public void calcHipoteca (){
 
         //Parseamos a double
@@ -142,9 +144,6 @@ public class MainActivity extends AppCompatActivity {
         setValues(mesStr, totalStr);
     }
 
-    public void onCalcular(View view) {
-        calcHipoteca();
-    }
 
     public void setValues (String mesCal, String totalCal) {
         mes.setText("Mes: "+mesCal);
